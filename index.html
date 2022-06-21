@@ -5,40 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="logo">
+    <img src="./images/logo.svg" alt="Splitter logo">
   </div>
+
+  <main class="calculator">
+    <form action="" class="calc">
+
+      <section class="inputs">
+        <div class="bill">
+          <label for="bill-amount" class="small-heading">Bill</label>
+          <div class="inputwrapper">
+            <img src="./images/icon-dollar.svg" alt="dollar sign">
+            <input type="number" name="bill-amount" id="bill-amount" required step=".01" placeholder="0">
+          </div>
+        </div>
+
+        <div class="tips">
+          <span class="small-heading">Select Tip %</span>
+          <button type="button" name="5per" id="5per">5%</button>
+          <button type="button" name="10per" id="10per">10%</button>
+          <button type="button" name="15per" id="15per">15%</button>
+          <button type="button" name="25per" id="25per">25%</button>
+          <button type="button" name="50per" id="50per">50%</button>
+          <button type="button" name="customper" id="customper">Custom</button>
+        </div>
+
+        <div class="people"> 
+          <label for="numPeople" class="small-heading">Number of People</label>
+          <div class="inputwrapper">
+            <img src="./images/icon-person.svg" alt="person icon">
+            <input type="number" id="numPeople" name="numPeople" required placeholder="0">
+          </div>
+        </div>
+      </section>
+
+      <section class="infos">  
+        <section class="result">
+          <div class="tipamount">
+            <div class="info-tip">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <span id="personAmount">$0.00</span>
+          </div>
+
+          
+          <div class="totalamount">
+            <div class="info-total">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <span id="totalPerson">$0.00</span>
+          </div>
+          
+          <button type="button" id="reset">Reset</button>
+
+        </section>
+      </section>
+    </form>
+  </main>
+
+  <script src="./main.js"></script>
 </body>
 </html>
