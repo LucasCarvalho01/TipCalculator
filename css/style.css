@@ -122,12 +122,6 @@ input[type="number"]::placeholder {
   font-size: 1.5rem;
 }
 
-.taxa:hover {
-  cursor: pointer;
-  transition: .1s;
-  background-color: var(--btn-hover);
-}
-
 #customper {
   background-color: var(--label);
   color: var(--inactive-button);
@@ -255,6 +249,12 @@ input::-webkit-inner-spin-button {
 
   .tips {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .taxa:hover {
+    cursor: pointer;
+    transition: .1s;
+    background-color: var(--btn-hover);
   }
 
   .people {
