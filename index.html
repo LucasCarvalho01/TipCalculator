@@ -23,28 +23,29 @@
 
       <section class="inputs">
         <div class="bill">
-          <label for="bill-amount" class="small-heading">Bill</label>
+          <label for="billAmount" class="small-heading">Bill</label>
           <div class="inputwrapper">
             <img src="./images/icon-dollar.svg" alt="dollar sign">
-            <input type="number" name="bill-amount" id="bill-amount" required step=".01" placeholder="0">
+            <input type="number" name="billAmount" id="bill-amount" step=".01" placeholder="0" required autofocus>
           </div>
         </div>
 
         <div class="tips">
           <span class="small-heading">Select Tip %</span>
-          <button type="button" name="5per" id="5per">5%</button>
-          <button type="button" name="10per" id="10per">10%</button>
-          <button type="button" name="15per" id="15per">15%</button>
-          <button type="button" name="25per" id="25per">25%</button>
-          <button type="button" name="50per" id="50per">50%</button>
-          <button type="button" name="customper" id="customper">Custom</button>
+          <button type="button" name="5per" id="5per" class="taxa" data-fee="5">5%</button>
+          <button type="button" name="10per" id="10per" class="taxa" data-fee="10">10%</button>
+          <button type="button" name="15per" id="15per" class="taxa" data-fee="15">15%</button>
+          <button type="button" name="25per" id="25per" class="taxa" data-fee="25">25%</button>
+          <button type="button" name="50per" id="50per" class="taxa" data-fee="50">50%</button>
+          <input type="number" name="customper" id="customper" data-fee placeholder="Custom">
         </div>
 
         <div class="people"> 
           <label for="numPeople" class="small-heading">Number of People</label>
           <div class="inputwrapper">
             <img src="./images/icon-person.svg" alt="person icon">
-            <input type="number" id="numPeople" name="numPeople" required placeholder="0">
+            <input type="number" id="numPeople" name="numPeople" required placeholder="0" min="1" value="1">
+            <span class="errorMessage"></span>
           </div>
         </div>
       </section>

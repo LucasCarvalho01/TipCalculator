@@ -9,6 +9,8 @@
   --small-headings: #537777;
   --dash-person: #4c868a;
   --placeholder: #a1b9b9;
+  --btn-hover: #9fe8df;
+  --error: #c77b6d;
 }
 
 *, body {
@@ -36,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .logo {
@@ -83,6 +85,12 @@ input[type="number"] {
   text-align: right;
   padding: .2rem .8rem;
   font-size: 1.6rem;
+  outline-color: var(--green-number);
+  color: var(--dark-green);
+}
+
+button {
+  outline-color: var(--green-number);
 }
 
 input[type="number"]::placeholder {
@@ -114,13 +122,40 @@ input[type="number"]::placeholder {
   font-size: 1.5rem;
 }
 
+.taxa:hover {
+  cursor: pointer;
+  transition: .1s;
+  background-color: var(--btn-hover);
+}
+
 #customper {
   background-color: var(--label);
   color: var(--inactive-button);
 }
 
+#customper.active {
+  border: 2px solid var(--green-number);
+}
+
+#customper::placeholder {
+  text-align: center;
+  color: var(--dash-person);
+}
+
 .people {
   margin: 2rem 0;
+}
+
+.people input.error {
+  outline-color: var(--error);
+  border: 2px solid var(--error);
+}
+
+.people span {
+  color: var(--error);
+  display: none;
+  margin-top: .6rem;
+  text-align: right;
 }
 
 .result {
@@ -161,6 +196,20 @@ input[type="number"]::placeholder {
   font-size: 1.2rem;
   padding: .5rem 0;
   border-radius: 6px;
+}
+
+#reset.active,
+.taxa.active {
+  background-color: var(--green-number);
+  color: var(--dark-green);
+  transition: .1s;
+}
+
+#reset.active:hover,
+.taxa.active:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover);
+  color: rgb(2, 79, 83);
 }
 
 input[type='number'] {
