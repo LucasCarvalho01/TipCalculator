@@ -13,12 +13,6 @@ dados.fee = 0;
 dados.numPeople = 1;
 dados.billAmount = 0;
 
-//change error message in case number of people = 0
-numberPeople.addEventListener("oninvalid", () => this.setCustomValidity("Can't be zero"));
-numberPeople.addEventListener("oninput", () => this.setCustomValidity(''));
-// numberPeople.oninvalid(this.setCustomValidity("Can't be zero"));
-// numberPeople.oninput(this.setCustomValidity(''));
-
 form.addEventListener('change', handleChange);
 
 taxas.forEach((item) => {
@@ -39,7 +33,6 @@ function handleCustomPer() {
 
 function handleChange(event) {
   if(event.target.name === 'numPeople' && !event.target.checkValidity()) {
-    errorMessage.innerText = event.target.validationMessage;
     errorMessage.style.display = "block";
     numberPeople.classList.add('error');
   }
@@ -118,6 +111,9 @@ function resetCalc() {
   this.classList.remove('active');
   errorMessage.style.display = 'none';
   taxas.forEach(item => item.classList.remove('active'));
+
+  //go to top of the page, especially on mobile
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 

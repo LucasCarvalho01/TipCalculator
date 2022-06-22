@@ -259,6 +259,14 @@ input::-webkit-inner-spin-button {
 
   .people {
     margin-bottom: .5rem;
+    position: relative;
+  }
+
+  .people span {
+    position: absolute;
+    right: 0;
+    top: -31px;
+    margin: 0; 
   }
 
   .result {
