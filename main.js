@@ -36,6 +36,14 @@ function handleChange(event) {
     errorMessage.style.display = "block";
     numberPeople.classList.add('error');
   }
+  //if number people is still 0
+  else if(numberPeople.value == 0) {
+    if(event.target.name) 
+      dados[event.target.name] = +event.target.value;
+    
+    else
+      null
+  }
   //don't calculate in case of people = 0, because of math problems
   else {
     //in case numberPeople was 0 in last input and is no more
