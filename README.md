@@ -1,6 +1,6 @@
 # Tip calculator app
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-design-completed.jpg)
+<img src="./design/desktop-design-completed.jpg" alt="app preview" style="width: 70%;"/>
 
 ## Welcome! 👋
 
