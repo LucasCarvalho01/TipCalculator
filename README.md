@@ -1,6 +1,6 @@
 # Tip calculator app
 
-<img src="./design/desktop-design-completed.jpg" alt="app preview" style="width: 70%;"/>
+<img src="./design/desktop-design-completed.jpg" alt="app preview" style="width: 70%; display: block; margin: 0 auto;"/>
 
 ## Welcome! 👋
 
